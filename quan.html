@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Em</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="boxheart">
+            
+            <div class="heart"><h1>Ấn vô đây nè </h1></div>
+            <div class="beat"></div>
+        </div>
+        <div class="boxchoose">
+            
+            <h2> NẾU NHƯ EM NÓI CHÚNG TA KHÔNG CHUNG ĐƯỜNG <br> KHÔNG SAO VÌ EM TÔI SẼ SẴN SÀNG THAY ĐỔI LỘ TRÌNH </h2>
+            <img src="https://gcs.tripi.vn/public-tripi/tripi-feed/img/474102PIt/anh-nen-sieu-xe-moto-cho-dien-thoai_101641291.jpg" alt="" />
+            <div class="listbutton">
+                <button id="no">không chịu</button>
+                <button id="yes">Em chịu</button>
+            </div>
+        </div>
+        <div class="popup">
+            <div class="inner">
+                <h3>I love u </h3>
+                <img src="https://www.vietnamworks.com/hrinsider/wp-content/uploads/2023/12/anh-cute-001-1-1.jpg" alt="" />
+                <p>Đi chơi nào baby</p>
+            </div>
+        </div>
+        <script>
+            const noBtn = document.querySelector("#no");
+            const yesBtn = document.querySelector("#yes");
+            let boxheart = document.querySelector(".boxheart");
+            let boxchoose = document.querySelector(".boxchoose");
+            let popup = document.querySelector(".popup");
+            boxheart.addEventListener("click", function () {
+                boxheart.classList.add("active");
+                boxchoose.classList.add("active");
+            });
+            yesBtn.addEventListener("click", function () {
+                popup.classList.add("active");
+            });
+            noBtn.addEventListener("mouseenter", () => {
+                const top = Math.floor(Math.random() * window.innerHeight);
+                const left = Math.floor(Math.random() * window.innerWidth);
+
+                noBtn.style.top = `${top}px`;
+                noBtn.style.left = `${left}px`;
+            });
+        </script>
+    </body>
+</html>
